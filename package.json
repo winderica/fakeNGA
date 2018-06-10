@@ -9,6 +9,6 @@
     "xml2js": "^0.4.19"
   },
   "scripts": {
-    "start": "(cd ./src && npm start) | node ./app.js"
+    "start": "(cd ./client && npm start) | node ./app.js"
   }
 }
