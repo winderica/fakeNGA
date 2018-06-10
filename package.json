@@ -1,0 +1,14 @@
+{
+  "name": "fakenga",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "express": "~4.16.0",
+    "iconv-lite": "latest",
+    "request": "latest",
+    "xml2js": "^0.4.19"
+  },
+  "scripts": {
+    "start": "(cd ./src && npm start) | node ./app.js"
+  }
+}
