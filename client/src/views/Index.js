@@ -11,6 +11,9 @@ import styles from '../styles/index';
 
 const mapStateToProps = state => state;
 
+/**
+ * Index component, rendered when access '/index'
+ */
 class Index extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchIfNeeded({ kind: 'index' }));

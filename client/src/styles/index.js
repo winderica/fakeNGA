@@ -25,7 +25,7 @@ const styles = theme => ({
         position: 'absolute',
         backgroundColor: primary.main,
     },
-    toolbar: theme.mixins.toolbar,
+    spaceTaker: theme.mixins.toolbar,
     drawerPaper: {
         width: drawerWidth,
         height: '100%',

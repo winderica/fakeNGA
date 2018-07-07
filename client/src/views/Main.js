@@ -12,6 +12,9 @@ import styles from '../styles/index';
 
 const mapStateToProps = state => state;
 
+/**
+ * Main frame
+ */
 class Main extends React.Component {
     render() {
         const { classes, children, content } = this.props;
@@ -22,7 +25,7 @@ class Main extends React.Component {
                 <AppBar/>
                 <Drawer/>
                 <main className={classes.content}>
-                    <div className={classes.toolbar}/>
+                    <div className={classes.spaceTaker}/>
                     {children}
                 </main>
             </div>

@@ -25,11 +25,17 @@ const store = createStore(
     applyMiddleware(...middleware)
 );
 
+/**
+ * Output present state
+ */
 store.subscribe(() => {
     console.log('State now:');
     console.log(store.getState());
 });
 
+/**
+ * Main structure of the page
+ */
 class App extends React.Component {
     render() {
         return (

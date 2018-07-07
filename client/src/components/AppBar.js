@@ -7,19 +7,13 @@ import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { withStyles } from "@material-ui/core/styles/index";
-
+import unescape from '../lib/unescape';
 import styles from '../styles/index';
 
 class Bar extends React.Component {
     render() {
         const { classes, onClick, title } = this.props;
-        const unescape = (s) => {
-            return s.replace(/&amp;/g, "&")
-                .replace(/&lt;/g, "<")
-                .replace(/&gt;/g, ">")
-                .replace(/&#39;/g, "'")
-                .replace(/&quot;/g, '"');
-        };
+
         return (
             <AppBar className={classes.appBar}>
                 <Toolbar>

@@ -1,4 +1,5 @@
 {
+  "cookie": "ngaPassportUid=41599596; ngaPassportCid=Z8kjjkoes0bch95rccdj4e5vpmbq16op1as8t8l9;",
   "fidToName": {
     "7": "艾泽拉斯议事厅",
     "8": "大图书馆",
@@ -165,6 +166,5 @@
     "-1168780": "M的平行世界幻想录",
     "-220875": "luguodisimao 的个人版面"
   },
-  "host": "https://bbs.ngacn.cc",
-  "cookie": "/* this is a blank */"
+  "host": "https://bbs.ngacn.cc"
 }

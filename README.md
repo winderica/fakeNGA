@@ -1,6 +1,8 @@
 # fakeNGA
 
 
+## TO BE REWRITEN BY TYPESCRIPT
+
 ### Introduction:
 1. fill blanks in `config.json` by your cookie of NGA
     > to get your NGA cookie, press `F12` in your browser,

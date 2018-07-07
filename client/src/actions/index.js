@@ -15,6 +15,11 @@ export const toggleDrawerOpen = () => ({
     type: TOGGLE_DRAWER_OPEN,
 });
 
+/**
+ * set `id`, `kind` and `page` when request
+ * @param req
+ * @returns {{type: string, id: *, page: *, kind: *}}
+ */
 export const request = req => ({
     type: REQUEST,
     id: req.id,
@@ -22,6 +27,11 @@ export const request = req => ({
     kind: req.kind,
 });
 
+/**
+ * set `items`, `title` and `totalPages` when data is received
+ * @param res
+ * @returns {{type: string, items: *, title: *, totalPages: number}}
+ */
 export const receive = res => ({
     type: RECEIVE,
     items: res.items,
@@ -71,10 +81,16 @@ export const setFirstLoad = (isFirstLoad) => ({
 });
 */
 
+/**
+ * A dictionary to execute function by case
+ */
 const responseHandlers = {
     'topic': res => {
         let userInfo = {};
         for (const i of res['users']['item']) {
+            /**
+             * Choose one avatar if there are multiple avatars
+             */
             if (/\/\*\$js\$\*\//.test(i['avatar'])) {
                 const t = JSON.parse(i['avatar'].replace(/\/\*\$js\$\*\//, ''));
                 i['avatar'] = t['' + Math.floor(t.l * Math.random())];
@@ -119,6 +135,12 @@ const doFetch = path => dispatch => {
         });
 };
 
+/**
+ * Determine whether function `doFetch` should be executed
+ * @param state
+ * @param prev
+ * @returns {boolean}
+ */
 const shouldFetch = (state, prev) => {
     return state.id !== prev.id || state.page !== prev.page || state.kind !== prev.kind || state.isLoading;
 };

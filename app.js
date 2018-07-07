@@ -6,6 +6,9 @@ const cookie = require('./config').cookie;
 
 fakeNGA.setCookie(cookie);
 
+/**
+ * Cross Origin
+ */
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "*");
@@ -53,7 +56,7 @@ app.listen(5000);
 
 //fakeNGA.login('winderica', 'yqzcr1999117', '', random);
 
-//fakeNGA.requestIndex().then(res => console.log(res[1]['forums']));
+//fakeNGA.requestIndex().then(res => console.log(res));
 //fakeNGA.requestForum(-7).then(res => console.log(res));
 //fakeNGA.requestTopic(10737415).then(res => console.log(res));
 //fakeNGA.requestUser('ywwuyi').then(res => console.log(res));

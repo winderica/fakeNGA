@@ -34,10 +34,10 @@ class ScrollableTabsButtonAuto extends React.Component {
                         scrollable
                         scrollButtons="on"
                     >
-                        {children.map(i => (<Tab key={i['name']} label={i['name']} />))}
+                        {children.map(i => (<Tab key={i['name']} label={i['name']}/>))}
                     </Tabs>
                 </AppBar>
-                    {children.map((i, j) => (value === j && <Category>{i}</Category>))}
+                {children.map((i, j) => (value === j && <Category>{i}</Category>))}
             </React.Fragment>
         );
     }
